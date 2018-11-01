@@ -1,0 +1,512 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("http://fonts.googleapis.com/css?family=Merriweather+Sans:700,300");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'trashhandregular';
+  src: url("fonts/trashhand-webfont.eot");
+  src: url("fonts/trashhand-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/trashhand-webfont.woff2") format("woff2"), url("fonts/trashhand-webfont.woff") format("woff"), url("fonts/trashhand-webfont.ttf") format("truetype"), url("fonts/trashhand-webfont.svg#trashhandregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'modern_sansregular';
+  src: url("fonts/moderne_sans-webfont.eot");
+  src: url("fonts/moderne_sans-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/moderne_sans-webfont.woff2") format("woff2"), url("fonts/moderne_sans-webfont.woff") format("woff"), url("fonts/moderne_sans-webfont.ttf") format("truetype"), url("fonts/moderne_sans-webfont.svg#modern_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'hk_groteskregular';
+  src: url("fonts/hkgrotesk-regular-webfont.eot");
+  src: url("fonts/hkgrotesk-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/hkgrotesk-regular-webfont.woff2") format("woff2"), url("fonts/hkgrotesk-regular-webfont.woff") format("woff"), url("fonts/hkgrotesk-regular-webfont.ttf") format("truetype"), url("fonts/hkgrotesk-regular-webfont.svg#hk_groteskregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+#container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+#mainNAV {
+  position: fixed;
+  width: 100%;
+  max-width: 1300px;
+  box-sizing: border-box;
+  z-index: 10;
+  text-align: right;
+  font-family: 'modern_sansregular';
+  background-color: #B3B3B3;
+  font-size: 18px;
+  padding: 20px;
+}
+#mainNAV a {
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+}
+@media screen and (max-width: 745px) {
+  #mainNAV {
+    display: none;
+  }
+}
+
+#phone {
+  width: 9.76563%;
+  position: absolute;
+  z-index: 5;
+  margin-left: 42%;
+  margin-top: 70px;
+  max-width: 150px;
+}
+@media screen and (min-width: 1300px) {
+  #phone {
+    margin-left: 0;
+    left: 43%;
+  }
+}
+
+#htop, #hbottom {
+  width: 100%;
+  max-width: 1300px;
+}
+
+#htop {
+  margin-top: 60px;
+}
+
+#home {
+  background-color: #B3B3B3;
+}
+#home h1 {
+  clear: both;
+  text-align: center;
+  margin: auto;
+  font-size: 48px;
+  font-family: 'trashhandregular';
+}
+#home h2 {
+  width: 54.10156%;
+  margin: auto;
+  font-size: 30px;
+  font-family: 'trashhandregular';
+  text-align: center;
+}
+
+h2 {
+  font-family: 'modern_sansregular';
+  font-size: 24px;
+  margin: auto;
+  text-align: center;
+}
+
+p {
+  font-family: 'hk_groteskregular';
+  font-size: 20px;
+}
+
+#about {
+  margin-top: -5px;
+  padding-top: 50px;
+  padding-bottom: 110px;
+  background-color: #E9E8E7;
+  font-family: 'modern_sansregular';
+}
+#about #aboutIMG {
+  width: 210px;
+  height: 210px;
+  background-image: url(images/me.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: auto;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 745px) {
+  #about #aboutIMG {
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+#about #lm {
+  margin: auto;
+  margin-bottom: 30px;
+  font-size: 16px;
+  text-align: center;
+  width: 29.29688%;
+  font-family: 'hk_groteskregular';
+}
+#about p {
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 50px;
+  line-height: 30px;
+}
+#about #skillset {
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#about #skillset ul {
+  width: 205px;
+  margin-right: 25px;
+}
+#about #skillset li {
+  text-align: center;
+}
+@media screen and (max-width: 745px) {
+  #about #skillset {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+#about #skillset #prog, #about #skillset #design, #about #skillset #photog {
+  width: 205px;
+  height: 152px;
+  border: solid #B3B3B3 2px;
+}
+#about #skillset #prog:hover, #about #skillset #design:hover, #about #skillset #photog:hover {
+  cursor: pointer;
+}
+#about #skillset #prog {
+  background-image: url(images/progY.png);
+  background-position: center;
+  background-size: 89px 64px;
+  background-repeat: no-repeat;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+#about #skillset #progName, #about #skillset #desName, #about #skillset #photogName {
+  color: #B3B3B3;
+}
+@media screen and (max-width: 745px) {
+  #about #skillset #progName, #about #skillset #desName, #about #skillset #photogName {
+    margin-bottom: 20px;
+  }
+}
+#about #skillset #design {
+  background-image: url(images/designY.png);
+  background-position: center;
+  background-size: 89px 64px;
+  background-repeat: no-repeat;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+#about #skillset #photog {
+  background-image: url(images/photogY.png);
+  background-position: center;
+  background-size: 89px 64px;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+#about #skillset #progDes, #about #skillset #desDes, #about #skillset #photogDes {
+  margin-top: 10px;
+  text-align: left;
+  font-family: 'hk_groteskregular';
+}
+@media screen and (max-width: 745px) {
+  #about #skillset #progDes, #about #skillset #desDes, #about #skillset #photogDes {
+    margin-bottom: 25px;
+  }
+}
+
+.slider {
+  width: 80%;
+  margin: auto;
+}
+@media screen and (max-width: 745px) {
+  .slider {
+    width: 100%;
+  }
+}
+
+.IMG {
+  width: 210px;
+  height: 210px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 745px) {
+  .IMG {
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+#work #projIMG {
+  background-image: url(images/proj.png);
+}
+#work h2 {
+  margin-bottom: 30px;
+}
+#work h3 {
+  padding-top: 10px;
+  font-family: 'modern_sansregular';
+  font-size: 17px;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+#work p {
+  margin: auto;
+  width: 60%;
+  text-align: center;
+  font-family: 'hk_groteskregular';
+  font-size: 16px;
+}
+#work #bottomspace {
+  margin-bottom: 100px;
+}
+#work a {
+  color: #ECAE40;
+}
+
+#resume {
+  background-color: #E9E8E7;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+#resume #resIMG {
+  background-image: url(images/res.png);
+}
+#resume p {
+  font-family: 'hk_groteskregular';
+  font-size: 16px;
+  width: 54.6875%;
+  margin: auto;
+  text-align: center;
+}
+#resume #rez {
+  display: block;
+  color: #B3B3B3;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 40px;
+  width: 100px;
+  padding: 10px;
+  font-family: 'modern_sansregular';
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #B3B3B3;
+}
+#resume #rez:hover {
+  border-color: black;
+  color: black;
+  cursor: pointer;
+}
+
+#contact {
+  margin-bottom: 50px;
+}
+#contact #contIMG {
+  background-image: url(images/cont.png);
+}
+#contact #contactinfo {
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 550px) {
+  #contact #contactinfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+#contact #contactinfo #addr {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+#contact h3 {
+  font-family: 'modern_sansregular';
+  text-align: center;
+  font-size: 18px;
+}
+#contact p {
+  font-family: 'hk_groteskregular';
+  font-size: 16px;
+  text-align: center;
+}
+@media screen and (max-width: 550px) {
+  #contact p {
+    margin-bottom: 25px;
+  }
+}
+
+#HOME:hover, #ABOUT:hover, #WORK:hover, #RESUME:hover, #CONTACT:hover {
+  cursor: pointer;
+}
+
+#menu {
+  display: none;
+}
+@media screen and (max-width: 745px) {
+  #menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#menu .box {
+  position: fixed;
+  text-align: center;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+#menu .box ul {
+  position: relative;
+  top: 20%;
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+#menu .box ul li {
+  display: inline-block;
+  margin: 20px;
+}
+#menu .box ul li a {
+  border-radius: 3px;
+  padding: 15px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  font-family: 'modern_sansregular';
+  font-size: 20px;
+}
+
+#menu li a:hover {
+  text-decoration: underline;
+}
+
+#toggle-nav-label {
+  position: fixed;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 30px;
+  font-size: 40px;
+  display: block;
+  cursor: pointer;
+  z-index: 500;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  left: 10px;
+  top: 10px;
+}
+
+#toggle-nav {
+  display: none;
+}
+
+#toggle-nav:checked ~ .box {
+  opacity: 1;
+  z-index: 400;
+}
+
+#toggle-nav:checked ~ .box ul {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+#toggle-nav:checked ~ #toggle-nav-label {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

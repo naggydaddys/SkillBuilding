@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Rachel Shields</title>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link href="CSS/style.css" rel="stylesheet" type="text/css" />
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="SSS-master/sss/sss.min.js"></script>
+    <link rel="stylesheet" href="SSS-master/sss/sss.css" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width"> 
+
+<script>
+    jQuery(function($) {
+    $('.slider').sss();
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $("#HOME").click(function(){
+            $('body,html').animate({scrollTop:$("#home").offset().top},1000);
+        });
+        $("#ABOUT").click(function(){
+            $('body,html').animate({scrollTop:$("#about").offset().top},1000);
+        });
+        $("#WORK").click(function(){
+            $('body,html').animate({scrollTop:$("#work").offset().top},1000);
+        });
+        $("#RESUME").click(function(){
+            $('body,html').animate({scrollTop:$("#resume").offset().top},1000);
+        });
+        $("#CONTACT").click(function(){
+            $('body,html').animate({scrollTop:$("#contact").offset().top},1000);
+        });
+        
+        //hamburger links
+        $("#a").click(function(){
+            $('body,html').animate({scrollTop:$("#home").offset().top},1000);
+        });
+        $("#b").click(function(){
+            $('body,html').animate({scrollTop:$("#about").offset().top},1000);
+        });
+        $("#c").click(function(){
+            $('body,html').animate({scrollTop:$("#work").offset().top},1000);
+        });
+        $("#d").click(function(){
+            $('body,html').animate({scrollTop:$("#resume").offset().top},1000);
+        });
+        $("#e").click(function(){
+            $('body,html').animate({scrollTop:$("#contact").offset().top},1000);
+        });
+        var progDown = false;
+        var desDown = false;
+        var photogDown = false;
+        $("#s1").hover(function(){
+            $(this).attr("src", "CSS/images/trixieC.jpg")
+            }, function(){
+            $(this).attr("src", "CSS/images/trixieBW.jpg");
+        });
+        $("#s2").hover(function(){
+            $(this).attr("src", "CSS/images/CraigsC.jpg")
+            }, function(){
+            $(this).attr("src", "CSS/images/CraigsBW.jpg");
+        });
+        $("#s3").hover(function(){
+            $(this).attr("src", "CSS/images/QueensC.jpg")
+            }, function(){
+            $(this).attr("src", "CSS/images/QueensBW.jpg");
+        });
+        $("#s4").hover(function(){
+            $(this).attr("src", "CSS/images/zenC.jpg")
+            }, function(){
+            $(this).attr("src", "CSS/images/zenBW.jpg");
+        });
+        $("#s5").hover(function(){
+            $(this).attr("src", "CSS/images/gstoneC.jpg")
+            }, function(){
+            $(this).attr("src", "CSS/images/gstoneBW.jpg");
+        });
+        $("#progDes").hide();
+        $("#desDes").hide();
+        $("#photogDes").hide();
+
+        $("#prog").hover(
+            function(){
+                if(progDown===false){
+                    $(this).css("background-image", "url(CSS/images/prog.png)")
+                    $(this).css("border-color", "black")
+                    $("#progName").css("color","black");
+                }
+            }, 
+            function(){
+                if(progDown===false){
+                    $(this).css("background-image", "url(CSS/images/progY.png)")
+                    $(this).css("border-color", "#B3B3B3");
+                    $("#progName").css("color","#B3B3B3");
+                }
+        });
+        $("#design").hover(
+            function(){
+                if(desDown===false){
+                    $(this).css("background-image", "url(CSS/images/design.png)")
+                    $(this).css("border-color", "black")
+                    $("#desName").css("color","black");
+                }
+            }, 
+           function(){
+               if(desDown===false){
+                   $(this).css("background-image", "url(CSS/images/designY.png)")
+                    $(this).css("border-color", "#B3B3B3");
+                    $("#desName").css("color","#B3B3B3");
+               }
+        });
+        $("#photog").hover(
+            function(){
+                if(photogDown===false){
+                    $(this).css("background-image", "url(CSS/images/photog.png)")
+                    $(this).css("border-color", "black")
+                    $("#photogName").css("color","black");
+                }
+            }, 
+            function(){
+                if(photogDown===false){
+                    $(this).css("background-image", "url(CSS/images/photogY.png)")
+                    $(this).css("border-color", "#B3B3B3");
+                    $("#photogName").css("color","#B3B3B3");
+                }
+        });
+        $("#prog").click(function(){
+            if(progDown===false){
+                $(this).css("background-image", "url(CSS/images/prog.png)")
+                $(this).css("border-color", "black")
+                $("#progName").css("color","black")
+                $("#progDes").slideDown();
+                progDown = true;
+            }
+            else{
+                $(this).css("background-image", "url(CSS/images/progY.png)")
+                $(this).css("border-color", "#B3B3B3")
+                $("#progName").css("color","#B3B3B3")
+                $("#progDes").slideUp();
+                progDown = false;
+            }
+            
+        });
+        $("#design").click(function(){
+            if(desDown===false){
+                $(this).css("background-image", "url(CSS/images/design.png)")
+                $(this).css("border-color", "black")
+                $("#desName").css("color","black")
+                $("#desDes").slideDown();
+                desDown = true;
+            }
+            else{
+                $(this).css("background-image", "url(CSS/images/designY.png)")
+                $(this).css("border-color", "#B3B3B3")
+                $("#desName").css("color","#B3B3B3")
+                $("#desDes").slideUp();
+                desDown = false;
+            }
+        });
+        $("#photog").click(function(){
+            if(photogDown===false){
+                $(this).css("background-image", "url(CSS/images/photog.png)")
+                $(this).css("border-color", "black")
+                $("#photogName").css("color","black")
+                $("#photogDes").slideDown();
+                photogDown = true;
+            }
+            else{
+                $(this).css("background-image", "url(CSS/images/photogY.png)")
+                $(this).css("border-color", "#B3B3B3")
+                $("#photogName").css("color","#B3B3B3")
+                $("#photogDes").slideUp();
+                photogDown = false;
+            }
+        });
+    });
+    
+</script>
+    
+</head>
+
+<body>
+    <div id="container">
+        
+        <nav id="menu">
+    		<input type="checkbox" id="toggle-nav"/>
+    		<label id="toggle-nav-label" for="toggle-nav"><i class="icon-reorder"></i></label>
+    		
+    		<div class="box">
+	    		<ul>
+	    			<li><a id="a">home</a></li>
+	    			<li><a id="b">about</a></li>
+	    			<li><a id="c">work</a></li>
+	    			<li><a id="d">resume</a></li>
+                    <li><a id="e">contact</a></li>
+	    		</ul>
+    		</div>
+    	</nav>
+       
+        
+        <nav id="mainNAV">
+            <a id="HOME">HOME</a>
+            <a id="ABOUT">ABOUT</a>
+            <a id="WORK">WORK</a>
+            <a id="RESUME">RESUME</a>
+            <a id="CONTACT">CONTACT</a>
+        </nav>
+        <div id="home">
+            <img id="htop" src="CSS/images/hometopcopy.jpg">
+            <h1>HI! I'M RACHEL.</h1>
+            <h2>I'M A MASTER'S STUDENT AT LEHIGH UNIVERSITY STUDYING TECHNICAL ENTREPRENEURSHIP.</h2>
+            <img id="hbottom" src="CSS/images/homebottom.jpg">
+        </div>
+        <div id="about">
+            <div id="aboutIMG"></div>
+            <h2>ABOUT ME</h2>
+            <p>My name is Rachel Shields and I'm an Entrepreneur based in Bethlehem, Pennsylvania. I aim to combine my interests in Computer Science and Psychology to develop applications that help users improve their mental health.</p>
+            <h2>SKILLS</h2>
+            <h3 id="lm">CLICK TO LEARN MORE!</h3>
+            <div id="skillset">   
+                <ul id="compProg">
+                    <li id="prog"></li>
+                    <li id="progName">PROGRAMMING</li>
+                    <li id="progDes"> I am proficient in Java, Javascript, HTML, and CSS. I am also familiar with Python and PHP.</li>
+                </ul>
+                <ul id="webDes">
+                    <li id="design"></li>
+                    <li id="desName">WEB DESIGN</li>
+                    <li id="desDes">I am proficient in Adobe Illustrator, Adobe Photoshop and Adobe Lightroom. I am also familiar with Adobe XD and Adobe After Effects.</li>
+                </ul>
+                <ul id="photo">
+                    <li id="photog"></li>
+                    <li id="photogName">PHOTOGRAPHY</li>
+                    <li id="photogDes">One of my favorite hobbies is photography. I enjoy shooting a variety of subjects and am proficient in manual shooting and photo editing. I have had my photos exhibited in different buildings on Lehigh's campus and published in the 26th edition of the Lehigh Review.</li>
+                </ul>
+            </div>
+        </div>
+    <div id="work">
+        <div class="IMG" id="projIMG"></div>
+        <h2>MY PROJECTS</h2>
+        <div class="slider">
+            <div>
+                <a href="https://naggydaddys.github.io/trixiestreats/"><img id="s1" src="CSS/images/trixieBW.jpg"></a>
+                <h3>Trixie's Treats: Website Design</h3> 
+                <p>Website redesign of <a href="http://www.trixiestruck.com/">trixiestruck.com</a> </p>
+            </div>
+            <div>
+                <a href="https://naggydaddys.github.io/craigscoffeehouse/"><img id="s2" src="CSS/images/CraigsBW.jpg"></a>
+                <h3>Craig's Coffeehouse: Website Design</h3> 
+                <p>Grunge themed website design for a fictional coffee shop </p>
+            </div>
+            <div>
+                <a href="https://naggydaddys.github.io/queens/"><img id="s3" src="CSS/images/QueensBW.jpg"></a>
+                <h3>Queens: Website Design</h3> 
+                <p>Responsive website design for a fictional music festival</p>
+            </div>
+            <div>
+                <a href="https://naggydaddys.github.io/csszengarden/"><img id="s4" src="CSS/images/zenBW.jpg"></a>
+                <h3>CSS Zen Garden: Website Design</h3> 
+                <p>Responsive CSS design of <a href="http://www.csszengarden.com">CSS Zen Garden</a></p>
+            </div>
+            <div>
+                <a href="http://www.lehigh.edu/rjs318/public/www-data/Greystone/"><img id="s5" src="CSS/images/gstoneBW.jpg"></a>
+                <h3>The Greystone: Website Design</h3> 
+                <p>Responsive website redesign for <a href="http://www.thegstone.com">The Greystone Restaurant</a></p>
+            </div>
+    
+        </div>
+        <div id="bottomspace"></div>
+    </div>
+    <div id="resume">
+        <div class="IMG" id="resIMG"></div>
+        <p>To learn more about my qualifications and experience, 
+    click below!</p>
+        <a id="rez" href="CSS/RachelShieldsResume.pdf">RESUME</a>
+    </div>
+    <div id="contact">
+        <div class="IMG" id="contIMG"></div>
+        <h2>CONTACT</h2>
+        <ul id="contactinfo">
+            <ul>
+                <li><h3>PHONE</h3></li>
+                <li><p>570-640-9429</p></li>
+            </ul>
+            <ul id="addr">
+                <li><h3>ADDRESS</h3></li>
+                <li><p>4 Campus Sq. Box 6729 <br> Bethlehem PA, 18015</p></li>
+            </ul>
+            <ul>
+                <li><h3>EMAIL</h3></li>
+                <li><p>rjs318@lehigh.edu</p></li>
+            </ul> 
+        </ul>
+    </div>
+
+</body>
+
+</html>
